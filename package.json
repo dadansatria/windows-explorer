@@ -1,0 +1,23 @@
+{
+  "name": "windows-explorer",
+  "private": true,
+  "workspaces": ["backend", "frontend"],
+  "scripts": {
+    "start": "bunx concurrently \"bun run backend:dev\" \"bun run frontend:dev\"",
+    "backend:dev": "cd backend && bunx prisma generate && bun run dev",
+    "frontend:dev": "cd frontend && bun run dev",
+    "build": "bunx concurrently \"bun run backend:build\" \"bun run frontend:build\"",
+    "test": "bunx concurrently \"bun run backend:test\" \"bun run frontend:test\"",
+    "seed": "cd backend && bunx prisma generate && bun prisma/seeds/folder.ts && bun prisma/seeds/file.ts",
+    "migrate": "cd backend && bunx prisma generate && bunx prisma migrate dev"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.4",
+    "autoprefixer": "10.4.14",
+    "concurrently": "^8.2.2",
+    "postcss": "8.4.31",
+    "tailwindcss": "3.3.0",
+    "vite": "^6.3.5",
+    "vitest": "^3.1.3"
+  }
+}

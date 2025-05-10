@@ -1,0 +1,57 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "jsx": "preserve",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    
+    /* Path Resolution */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "~tailwind": ["../node_modules/tailwindcss"],
+      "~primevue": ["../node_modules/primevue"]
+    },
+    
+    /* Type Checking */
+    "types": [
+      "vite/client",
+      "vitest/globals"
+    ],
+    
+    /* Vue Support */
+    "jsxImportSource": "vue",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    
+    /* Output */
+    "noEmit": true,
+    "allowSyntheticDefaultImports": true,
+    
+    /* Experimental */
+    "experimentalDecorators": true,
+    "useDefineForClassFields": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "tests/**/*.ts",
+    "tests/**/*.d.ts",
+    "vite.config.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.spec.ts"
+  ],
+  "references": [
+    { "path": "../backend" }
+  ]
+}

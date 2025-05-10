@@ -1,0 +1,28 @@
+generator client {
+	provider = "prisma-client-js"
+}
+
+datasource db {
+	provider = "mysql"
+	url      = env("DATABASE_URL")
+}
+
+model Folder {
+	id			Int			@id @default(autoincrement())
+	name		String		@db.VarChar(255)
+	parentId	Int?
+	createdAt	DateTime	@default(now())
+	updatedAt	DateTime	@updatedAt
+
+	@@map("folders")
+}
+
+model File {
+	id			Int			@id @default(autoincrement())
+	name		String		@db.VarChar(255)
+	folderId	Int?
+	createdAt	DateTime	@default(now())
+	updatedAt	DateTime	@updatedAt
+
+	@@map("files")
+}
