@@ -112,14 +112,9 @@ const toggleFolder = (folderId: number): void => {
 // Handle search
 const handleSearch = async (searchData: { query: string, type: string }): Promise<void> => {
 	try {
-		if (searchData.type === 'File') {
-			files.value = await getFiles(null, searchData.query)
-		} else if (searchData.type === 'Folder') {
-			const allFolders = await getFolders(currentFolder.value?.id || 0)
-			folders.value = allFolders.filter(folder => 
-				folder.name.toLowerCase().includes(searchData.query.toLowerCase())
-			)
-		}
+		const isFileSearch = searchData.type === 'File'
+		files.value = isFileSearch ? await getFiles(null, searchData.query) : []
+		folders.value = isFileSearch ? [] : await getFolders(null, searchData.query)
 	} catch (error) {
 		console.error('Search failed:', error)
 	}
