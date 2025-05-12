@@ -1,7 +1,6 @@
 import { edenTreaty } from '@elysiajs/eden';
-import { app } from '../../index';
-import prisma from '../../prisma/client';
-import { Folder, ApiResponse, EdenApi } from '../../types/api';
+import prisma from '@/prisma/client';
+import { EdenApi } from '@/types/api';
 
 // @ts-ignore
 const api = edenTreaty<EdenApi>('http://localhost:3000');

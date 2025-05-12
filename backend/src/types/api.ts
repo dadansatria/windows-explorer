@@ -1,4 +1,3 @@
-import { Elysia } from 'elysia';
 
 export type File = {
     id: number;

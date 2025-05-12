@@ -1,5 +1,4 @@
-import { File } from "@prisma/client";
-import { IFileRepository } from "../repositories/IFileRepository";
+import { IFileRepository } from "@/repositories/IFileRepository";
 
 export class FileService {
     constructor(private readonly fileRepository: IFileRepository) {}

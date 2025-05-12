@@ -93,7 +93,6 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { useToast } from 'primevue/usetoast'
 import Breadcrumb from 'primevue/breadcrumb'
 import Dialog from 'primevue/dialog'
 import ProgressSpinner from 'primevue/progressspinner'
@@ -124,7 +123,6 @@ const props = defineProps<{
 
 const emit = defineEmits(['navigate', 'refresh', 'search'])
 
-const toast = useToast()
 const searchQuery = ref('')
 const loading = ref(false)
 const showFilePreview = ref(false)

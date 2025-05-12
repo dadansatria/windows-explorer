@@ -28,8 +28,8 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { getFolders, getFiles } from '@/infrastructure/api/folderService'
-import FolderTree from './FolderTree.vue'
-import FileList from './FileList.vue'
+import FolderTree from '@/components/explorer/FolderTree.vue'
+import FileList from '@/components/explorer/FileList.vue'
 import type { File, Folder } from '@/core/domain/models'
 
 // State management

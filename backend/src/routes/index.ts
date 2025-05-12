@@ -2,8 +2,8 @@
 import { Elysia } from 'elysia';
 
 //import controller
-import { get as getFolders } from '../controllers/FolderController';
-import { get as getFiles } from '../controllers/FileController';
+import { get as getFolders } from '@/controllers/FolderController';
+import { get as getFiles } from '@/controllers/FileController';
 
 const Routes = new Elysia();
 

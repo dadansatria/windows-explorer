@@ -3,11 +3,13 @@
   "private": true,
   "workspaces": ["backend", "frontend"],
   "scripts": {
+    "test": "bunx concurrently \"bun run backend:test\" \"bun run frontend:test\"",
     "start": "bunx concurrently \"bun run backend:dev\" \"bun run frontend:dev\"",
     "backend:dev": "cd backend && bunx prisma generate && bun run dev",
-    "frontend:dev": "cd frontend && bun run dev",
+    "frontend:dev": "cd frontend && bunx vitest --config vite.config.ts",
+    "frontend:test": "cd frontend && bun run test",
+    "backend:test": "cd backend && bun test",
     "build": "bunx concurrently \"bun run backend:build\" \"bun run frontend:build\"",
-    "test": "bunx concurrently \"bun run backend:test\" \"bun run frontend:test\"",
     "seed": "cd backend && bunx prisma generate && bun prisma/seeds/folder.ts && bun prisma/seeds/file.ts",
     "migrate": "cd backend && bunx prisma generate && bunx prisma migrate dev"
   },

@@ -1,5 +1,5 @@
 import { Folder } from "@prisma/client";
-import prisma from "../../prisma/client";
+import prisma from "@/prisma/client";
 import { IFolderRepository } from "./IFolderRepository";
 
 export class FolderRepository implements IFolderRepository {

@@ -1,4 +1,4 @@
-import { IFolderRepository } from "../repositories/IFolderRepository";
+import { IFolderRepository } from "@/repositories/IFolderRepository";
 
 export class FolderService {
     constructor(private readonly folderRepository: IFolderRepository) {}

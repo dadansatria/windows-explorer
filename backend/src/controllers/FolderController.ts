@@ -1,5 +1,5 @@
-import { FolderService } from "../services/FolderService";
-import { FolderRepository } from "../repositories/FolderRepository";
+import { FolderService } from "@/services/FolderService";
+import { FolderRepository } from "@/repositories/FolderRepository";
 
 const folderRepository = new FolderRepository();
 const folderService = new FolderService(folderRepository);

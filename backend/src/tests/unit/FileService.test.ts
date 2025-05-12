@@ -1,5 +1,5 @@
-import { FileService } from '../../services/FileService';
-import { IFileRepository } from '../../repositories/IFileRepository';
+import { FileService } from '@/services/FileService';
+import { IFileRepository } from '@/repositories/IFileRepository';
 import { File } from '@prisma/client';
 
 describe('FileService', () => {
@@ -11,7 +11,6 @@ describe('FileService', () => {
             findAll: jest.fn(),
         };
         fileService = new FileService(mockFileRepository);
-        // Mock console.error untuk menekan output error
         jest.spyOn(console, 'error').mockImplementation(() => {});
     });
 

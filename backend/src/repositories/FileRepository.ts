@@ -1,5 +1,5 @@
 import { File } from "@prisma/client";
-import prisma from "../../prisma/client";
+import prisma from "@/prisma/client";
 import { IFileRepository } from "./IFileRepository";
 
 export class FileRepository implements IFileRepository {

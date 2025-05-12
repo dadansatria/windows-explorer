@@ -52,7 +52,8 @@ The application will be available at:
 - Frontend: http://localhost:5173
 - Backend API: http://localhost:3000
 
-### 6. Start the app
+### 6. Test the app
+Run unit integration for backend and frontend side
 ```
-bun test
+bun run test
 ```

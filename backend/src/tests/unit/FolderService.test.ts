@@ -1,5 +1,5 @@
-import { FolderService } from '../../services/FolderService';
-import { IFolderRepository } from '../../repositories/IFolderRepository';
+import { FolderService } from '@/services/FolderService';
+import { IFolderRepository } from '@/repositories/IFolderRepository';
 import { Folder } from '@prisma/client';
 
 describe('FolderService', () => {
@@ -11,7 +11,6 @@ describe('FolderService', () => {
             findAll: jest.fn(),
         };
         folderService = new FolderService(mockFolderRepository);
-        // Mock console.error untuk menekan output error
         jest.spyOn(console, 'error').mockImplementation(() => {});
     });
 

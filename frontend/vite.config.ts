@@ -50,6 +50,11 @@ export default defineConfig(({ mode }) => {
     test: {
       globals: true,
       environment: 'jsdom',
+      include: [
+        'src/**/*.{test,spec}.{js,ts,jsx,tsx}',
+        'tests/unit/**/*.{test,spec}.{js,ts,jsx,tsx}'
+      ],
+      setupFiles: './tests/setup.ts',
       coverage: {
         provider: 'v8',
         reporter: ['text', 'json', 'html'],
